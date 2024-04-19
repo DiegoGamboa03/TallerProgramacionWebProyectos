@@ -4,27 +4,7 @@
     <meta charset="UTF-8">
     <meta nombre="viewport" contenido="ancho=dispositivo-ancho, escala inicial=1.0">
     <título>menú chile</título>
-    <estilo>
- .contenedor{
- ancho: 1920px;
- alta: 1080px;
-        }
-
- .tabla{
- alta: 300px;
-        }
-
- .letras{
- texto-decoración: ninguno;
- familia tipográfica: Verdana, Ginebra, Tahoma, sans-serif;
-
-        }
-
- .letrotas{
- familia tipográfica: Verdana, Ginebra, Tahoma, sans-serif
-
-        }
-    </estilo>
+    <enlace rel="hoja de estilo" href="./estilo.css" />
 </cabeza>
 <cuerpo>
     <div clase="contenedor">
@@ -38,14 +18,14 @@
             </tabla>
             <hermano><hermano>
             <nav>
-                <tabla frontera="0" ancho="50%" alinear="centro" espacio celular="0" bodercolor="negro">
-                    <tr alinear="centro">
-                        <td><a href="./indice.html" clase="letras" estilo="color: cian;"><fuerte>Inicio</fuerte></a></td>
-                        <td><a href="./localizaciones.html" clase="letras" estilo="color: cian;"><fuerte>Locaciones</fuerte></a></td>
-                        <td><a href="./promociones.html" clase="letras" estilo="color: cian;"><fuerte>Promociones</fuerte></a></td>
-                        <td><a href="./pedidos.html" clase="letras" estilo="color: cian;"><fuerte>Pedidos</fuerte></a></td>
-                    </tr>
-                </tabla>
+                <div estilo="texto alineado: centro;">
+                    <ul estilo="tipo de estilo de lista: ninguno; margen: 0; acolchado: 0; mostrar: bloque en línea;">
+                        <li estilo="mostrar: en línea; margen-derecha: 10px;"><a href="./paginas/indice.html">Inicio</a></li>
+                        <li estilo="mostrar: en línea; margen-derecha: 10px;"><a href="./paginas/localizaciones.html">Locaciones</a></li>
+                        <li estilo="mostrar: en línea; margen-derecha: 10px;"><a href="./paginas/promociones.html">Promociones</a></li>
+                        <li estilo="mostrar: en línea; margen-derecha: 10px;"><a href="./paginas/pedidos.html">Pedidos</a></li>
+                    </ul>
+                </div>
             </nav>
  </cabecera>
         <hermano><hermano><hermano>
@@ -70,4 +50,4 @@
         </principal>
  </div>
 </cuerpo>
- </html>
+        </html>
