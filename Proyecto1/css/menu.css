@@ -1,0 +1,194 @@
+/* Estilos para el menu  de opciones del nav*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* Ancho del navbar */
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Altura ajustada para centrar verticalmente */
+}
+
+.navbar li {
+  width: 100%;
+  margin: 10px 0; /* Espacio entre botones */
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, width 0.5s, color 0.3s;
+  border-radius: 30px; /* Ajuste del border-radius */
+  width: 60px;
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover y transiciones */
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #0563bb;
+  color: #fff;
+  width: 100%; /* Asegura el 100% del ancho disponible */
+  border-radius: 30px; /* Mantenemos el mismo border-radius que en el estado normal */
+  justify-content: start;
+  padding-left: 20px; /* Espacio para texto desde el borde */
+}
+
+.navbar a:hover span,
+.navbar a:focus span {
+  display: inline; /* Muestra el texto en hover */
+}
+
+.navbar a span {
+  display: none; /* Oculta el texto por defecto */
+  margin-left: 10px;
+}
+
+
+.bx {
+  font-size: 20px; /* Tamaño de icono ajustado */
+}
+
+
+.container{
+  text-align: center;
+  padding: 15%;
+}
+.container h1{
+  text-align: start;
+  font-size: 90px;
+}
+
+.container h4{
+  text-align: start;
+  max-width: 60%;
+  color: darkgrey;
+}
+
+#logoFondo{
+  margin-top: 3px;
+  margin-left: 3px;
+  width: 150px;
+  position: absolute;
+  opacity: 45%; 
+}
+
+#logoInicio{
+  margin-top: 11%;
+  margin-left: 52%;
+  text-align: end;
+  position: absolute;
+  width: 36%;
+}
+
+
+
+/* Estilos del inicio del menu */
+.menuchilis {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.carta{
+  margin-top:-18% ;
+  padding: 18%;
+
+}
+
+.favorito, .taco {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorito div, .taco div {
+  width: 20%; /* Puedes ajustar este valor según tus necesidades */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorito h1, .taco h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.favorito img, .taco img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* Estilos localizacion */
+.local {
+  display: flex;
+  justify-content: space-between;
+}
+
+.local > div {
+  width: 30%; /* Ancho de cada tarjeta */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.local img {
+  width: 100%;
+  border-radius: 8px 8px 0 0; /* Redondear solo la esquina superior de la imagen */
+  margin-bottom: 15px;
+}
+
+.local h3 {
+  margin-top: 0;
+}
+
+.local button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.local button:hover {
+  background-color: #45a049;
+}
+
+.local img {
+  width: 100%; /* Ajustar la imagen al ancho del contenedor */
+  height: 380px; /* Altura fija para todas las imágenes */
+  object-fit: cover; 
+  border-radius: 8px 8px 0 0; /* Redondear solo la esquina superior de la imagen */
+  margin-bottom: 15px;
+}
