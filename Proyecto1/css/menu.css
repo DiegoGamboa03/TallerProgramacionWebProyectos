@@ -21,8 +21,10 @@
 }
 
 .navbar li {
-  width: 100%;
+ width: 100%;
+  flex-grow: 1; /* Comando que permite que la animacion sea mas suave entre botones*/
   margin: 10px 0; /* Espacio entre botones */
+
 }
 
 .navbar a {
@@ -42,12 +44,15 @@
 /* Hover y transiciones */
 .navbar a:hover,
 .navbar a:focus {
+
   background-color: #0563bb;
   color: #fff;
   width: 100%; /* Asegura el 100% del ancho disponible */
   border-radius: 30px; /* Mantenemos el mismo border-radius que en el estado normal */
   justify-content: start;
   padding-left: 20px; /* Espacio para texto desde el borde */
+
+
 }
 
 .navbar a:hover span,
