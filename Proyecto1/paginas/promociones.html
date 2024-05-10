@@ -1,82 +1,104 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <link rel="stylesheet" href="../css/estilo.css" />
-</head>
-<body>
-    <header>
-        <h1 style="text-align: center;">Chili's</h1>
-
-        <div style="text-align: center;">
-            <ul style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
-                <li style="display: inline; margin-right: 10px;"><a href="../index.html">Inicio</a></li>
-                <li style="display: inline; margin-right: 10px;"><a href="../paginas/menu.html">Menu</a></li>
-                <li style="display: inline; margin-right: 10px;"><a href="../paginas/localizaciones.html">Locaciones</a></li>
-                <li style="display: inline; margin-right: 10px;"><a href="../paginas/pedidos.html">Pedidos</a></li>
-            </ul>
-        </div>
-    </header>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/menu.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
+    </head>
     <body>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Centrada</title>
-    <style>
-        /* Estilo para centrar la tabla */
-        .centrar-tabla {
-            margin: 0 auto; /* Margen automático para centrar horizontalmente */
-        }
-        /* Estilo para la tabla y sus celdas */
-        table {
-            width: 575px; /* Ancho fijo para la tabla */
-            border: 2px solid black;
-            border-collapse: collapse; /*Sirve para ponerle un solo borde a la tabla*/
-        }
-        th, td {
-            border: 2px solid black;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="centrar-tabla">
-<br> <!--espacio entre menu y tabla --->
-</br> 
-        <table width="80%"border="2"align="center"cellspacing="0" bordercolor="green"bgcolor="white">
-            <tr>
-                <th rowspan="2">NOMBRE DE PROMOCION</th>
-                <th colspan="2">PRECIO</th>
-                <th rowspan="2">FECHA DE VALIDEZ</th>
-            </tr>
-            <tr>
-                <th>Con membresia</th>
-                <th>Sin membresia</th>
-            </tr>
-            <tr>	
-                <td><img src="../img/achiliar.png" alt="imagen ejemplo" border="0" width="45"> A CHILIAR</td>
-                <td>20.99$</td>
-                <td>25.99$</td>
-                <td>25/ABRIL/2024</td>
-            </tr>
-            <tr>
-                 <td><img src="../img/3pami.png" alt="imagen ejemplo" border="0" width="45"> 3 PARA MI</td>
-                <td>20.99$</td>
-                <td>24.99$</td>
-                <td>25/ABRIL/2024</td>
-            </tr>
-			<tr>
-                <td><img src="../img/50menos.png" alt="imagen ejemplo" border="0" width="45"> HASTA 50% DSCTO</td>
-                <td>10.99$</td>
-                <td>15.99$</td>
-                <td>25/ABRIL/2024</td>
-            </tr>
-			<tr>
-                <td><img src="../img/promosan.png" alt="imagen ejemplo" border="0" width="45"> PROMOCIONES SANDWICHES</td>
-                <td>18.99$</td>
-                <td>24.99$</td>
-                <td>25/ABRIL/2024</td>
-            </tr>
-        </table>
-    </div>
-</body>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="../index.html"><i
+                                        class="bx bx-home"></i>
+                                <span>Inicio</span></a></li>
+                <li><a href="menu.html"><i
+                                        class='bx bx-news'></i>
+                                <span>Menu</span></a></li>
+                <li><a href="localizacion.html"><i class='bx bx-map'></i>
+                                <span>Localización</span></a></li>
+                <li><a href="promociones.html"><i class='bx bx-store-alt'></i>
+                                <span>Promociones</span></a></li>
+                <li><a href="pedidos.html"><i class='bx bx-cart-alt'></i>
+                                <span>Pedidos</span></a></li>
+        </ul>
+        </nav>
+        <img id="logoFondo" src="../img/logo.png" alt>
+        <!-- hasta aca debe de repetir lo mismo en las otras paginas  -->
+<div class="menuchilis">
+                        <div class="carta">
+                                <h1><i class='bx bx-happy-beaming'></i>
+                                        A CHILIAR </h1>
+                                <div class="favorito">
+                                        <div>
+                                                <img src="../img/dea3p.png" alt>
+                                                <h3>A Chiliar de a 3 Premium</h3>
+                                                <p>A Chiliar de a 3! Llévate 01 Old Timer + 01 Chicken Crispers + Chicken Club Tacos a solo S/71.90<br> </br> <br> </br></p>
+                                                <p>S/ 71.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                                <div>
+                                                <img src="../img/dea2d.png" alt>
+                                                <h3>A chiliar de a 2 Doble TACO</h3>
+                                                <p>ULlévate unos Crispy Chicken Tacos y unos Chicken Club tacos a solo S/44.90.
+                                                  <br> </br>   <br> </br>     </p>
+                                                <p>S/ 44.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                                <div>
+                                                <img src="../img/para1t.png"
+                                                        alt>
+                                                <h3>A Chiliar Para 1 con Tacos</h3>
+                                                <p>FA Chiliar para 1! Llévate nuestros deliciosos Chicken Club Tacos + una gaseosa personal a solo S/ 29.90. No te lo pierdas!<br> </br></p>
+                                                <p>S/ 29.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                        </div>
+<h1><i class='bx bxs-wink-smile'></i> PROMOCIONES SANDWICHES
+                                </h1>
+                                <div class="taco">
+                                        <div>
+                                                <img src="../img/BUFALO.PNG" alt>
+                                                <h3>PROMO BUFFALO CHICKEN SANDWICH</h3>
+                                                <p>TJugosa pechuga de pollo empanizada con salsa búffalo, lechuga, tomate y ranch. Acompañado de papas fritas.
+                                                 <br> </br>      
+                                                </p>
+                                                <p>S/ 31.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                                        <div>
+                                                <img src="../img/CHIKY.PNG" alt>
+                                                <h3>PROMO CHICKY BLEU SANDWICH</h3>
+                                                <p>Crujiente pechuga de pollo, tocino, palta, queso azul, lechuga, cebolla, tomate. Acompañado de papas fritas.
+                                                          
+                                                </p>
+                                                <p>S/ 41.00</p>
+                                                <button>agregar</button>
+                                        </div>
+                                        <div>
+                                                <img src="../img/HONEY.PNG" alt>
+                                                <h3>PROMO HONEY CRISPY CHICKEN SANDWICH</h3>
+                                                <p>Sandwich de pollo empanizado con Salsa Honey Mustard, Tocino, Mayonesa, Lechuga y Tomate, acompañado de papas fritas
+
+                                                </p>
+                                                <p>S/ 24.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                                        <div>
+                                                <img src="../img/CHIPOTLE.PNG" alt>
+                                                <h3>PROMO CHIPOTLE SANDWICH</h3>
+                                                <p>Sandwich de pollo con Salsa Honey Chipotle, Mayonesa, Lechuga y Col Slaw, acompañado de papas fritas.
+                                                        <br> </br>     
+                                                </p>
+                                                <p>S/ 31.90</p>
+                                                <button>agregar</button>
+                                        </div>
+                                </div>
+</div>    
+
+
+    </body>
 </html>
