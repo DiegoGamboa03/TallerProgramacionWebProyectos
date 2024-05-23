@@ -1,10 +1,11 @@
 import Menu from "../../components/Menu";
+import modeloComida from "../../assets/img/modeloComida.webp"
 
 function Orders(){
     return(
         <>
         <Menu/>
-        <img id="logoInicio" src="../img/modeloComida.webp" alt/>
+        <img id="logoInicio" src={modeloComida} alt/>
         <div class="container">
             <h1>¿Por que deberias<br/>ordenar<br/>con nosotros?</h1>
             <h4>¡Prepárate para una experiencia culinaria extraordinaria en Chili's, tu destino supremo para una comida<br/>

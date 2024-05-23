@@ -1,11 +1,12 @@
 import Menu from "./components/Menu"
+import modeloComida from "./assets/img/modeloComida.webp";
 function App() {
 
   return (
     <>
       <Menu></Menu>
       
-      <img id="logoInicio" src="./img/modeloComida.webp" alt/>
+      <img id="logoInicio"  src={modeloComida} alt="Modelo de Comida" />
         <div class="container">
             <h1>¿Quiénes somos?</h1>
             <h4>¡Bienvenidos a Chilis! Desde nuestra fundación en 1975, nos

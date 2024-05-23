@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoIni from "../assets/img/logo.png"
 
 function Menu() {
     return (<>
@@ -18,7 +19,7 @@ function Menu() {
                     <span>Pedidos</span></Link></li>
             </ul>
         </nav>
-        <img id="logoFondo" src="../assets/img/logo.png" alt></img>
+        <img id="logoFondo" src={logoIni} alt></img>
     </>)
 }
 export default Menu;
