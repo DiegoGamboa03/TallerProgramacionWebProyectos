@@ -1,0 +1,195 @@
+/* Estilos para el menu de opciones del nav */
+.navbar {   
+  position: fixed; /* Establece la posición fija para el navbar */
+  top: 0; /* Posiciona el navbar en la parte superior */
+  left: 0; /* Posiciona el navbar en el extremo izquierdo */
+  width: 80px; /* Ancho del navbar */
+  height: 100%; /* Altura del navbar que ocupa toda la pantalla */
+  background-color: transparent; /* Fondo transparente */
+  display: flex; /* Usa flexbox para el diseño */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+.navbar ul {
+  list-style: none; /* Elimina los marcadores de lista */
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  height: 300px; /* Altura ajustada para centrar verticalmente */
+}
+
+.navbar li {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  flex-grow: 1; /* Permite que la animación entre botones sea más suave */
+  margin: 10px 0; /* Espacio entre botones */
+}
+
+.navbar a {
+  display: flex; /* Usa flexbox para el diseño */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  height: 60px; /* Altura de los elementos de navegación */
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Elimina la decoración de texto predeterminada */
+  transition: background-color 0.3s, width 0.5s, color 0.3s; /* Transiciones suaves en hover */
+  border-radius: 30px; /* Borde redondeado */
+  width: 60px; /* Ancho de los elementos de navegación */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Hover y transiciones */
+.navbar a:hover,
+.navbar a:focus {
+  background-color: #0563bb; /* Color de fondo en hover */
+  color: #fff; /* Color del texto en hover */
+  width: 100%; /* Ancho completo en hover */
+  border-radius: 30px; /* Borde redondeado en hover */
+  justify-content: start; /* Alinea el texto a la izquierda en hover */
+  padding-left: 20px; /* Espacio para texto desde el borde en hover */
+}
+
+.navbar a:hover span,
+.navbar a:focus span {
+  display: inline; /* Muestra el texto en hover */
+}
+
+.navbar a span {
+  display: none; /* Oculta el texto por defecto */
+  margin-left: 10px; /* Espacio entre el icono y el texto */
+}
+
+.bx {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+.container {
+  text-align: center; /* Centra el contenido del contenedor */
+  padding: 15%; /* Relleno del contenedor */
+}
+
+.container h1 {
+  text-align: start; /* Alineación del texto a la izquierda */
+  font-size: 90px; /* Tamaño de fuente */
+}
+
+.container h4 {
+  text-align: start; /* Alineación del texto a la izquierda */
+  max-width: 60%; /* Ancho máximo del texto */
+  color: darkgrey; /* Color del texto */
+}
+
+#logoFondo {
+  margin-top: 3px; /* Margen superior */
+  margin-left: 3px; /* Margen izquierdo */
+  width: 150px; /* Ancho del logo */
+  position: absolute; /* Posicionamiento absoluto */
+  opacity: 45%; /* Opacidad */
+}
+
+#logoInicio {
+  margin-top: 11%; /* Margen superior */
+  margin-left: 52%; /* Margen izquierdo */
+  text-align: end; /* Alineación del texto a la derecha */
+  position: absolute; /* Posicionamiento absoluto */
+  width: 36%; /* Ancho del logo */
+}
+
+/* Estilos del inicio del menu */
+.menuchilis {
+  display: flex; /* Usa flexbox para el diseño */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  padding: 5%; /* Relleno */
+}
+
+.carta {
+  margin-top: -18%; /* Margen superior negativo */
+  padding: 18%; /* Relleno */
+}
+
+.favorito,
+.taco {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: space-between; /* Distribuye uniformemente los elementos */
+}
+
+.favorito div,
+.taco div {
+  width: 20%; /* Ancho de las tarjetas */
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 20px; /* Relleno */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.favorito h1,
+.taco h1 {
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.favorito img,
+.taco img {
+  max-width: 100%; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática */
+}
+
+button {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Relleno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor tipo puntero */
+}
+
+button:hover {
+  background-color: #45a049; /* Color de fondo del botón en hover */
+}
+
+/* Estilos localizacion */
+.local {
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: space-between; /* Distribuye uniformemente los elementos */
+}
+
+.local > div {
+  width: 30%; /* Ancho de las tarjetas */
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 20px; /* Relleno */
+  border-radius: 10px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.local img {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  border-radius: 8px 8px 0 0; /* Borde redondeado en la parte superior */
+  margin-bottom: 15px; /* Margen inferior */
+}
+
+.local h3 {
+  margin-top: 0; /* Margen superior */
+}
+
+.local button {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Relleno del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor tipo puntero */
+}
+
+.local button:hover {
+  background-color: #45a049; /* Color de fondo del botón en hover */
+}
+
+.local img {
+  width: 100%; /* Ajustar la imagen al ancho del contenedor */
+  height: 380px; /* Altura fija para todas las imágenes */
+  object-fit: cover; /* Escalar la imagen para cubrir el contenedor manteniendo su relación de aspecto */
+  border-radius: 8px 8px 0 0; /* Redondear solo la esquina superior de la imagen */
+  margin-bottom: 15px; /* Margen inferior para separar las imágenes */
+}
