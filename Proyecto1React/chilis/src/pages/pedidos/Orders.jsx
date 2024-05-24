@@ -1,7 +1,13 @@
 import Menu from "../../components/Menu";
-import modeloComida from "../../assets/img/modeloComida.webp"
 import { useOrderContext } from "../../OrderProvider";
 import OrderItem from "../../components/OrderItem";
+import Pica from "../../assets/img/pica.avif";
+import Tosta from "../../assets/img/tosta.avif"
+import Choclo from "../../assets/img/choclo.avif"
+import Hamburg from "../../assets/img/hamburg.avif"
+import Taco1 from "../../assets/img/taco1.avif"
+import Taco2 from "../../assets/img/taco2.avif"
+import Taco3 from "../../assets/img/taco4.avif"
 
 
 function Orders(){
@@ -9,27 +15,27 @@ function Orders(){
 
     const importarImagen = (ruta) => {
         switch (ruta) {
-            case "../assets/img/pica.avif":
+            case "/src/assets/img/pica.avif":
                 return Pica;
-            case "../assets/img/tosta.avif":
+            case "/src/assets/img/tosta.avif":
                 return Tosta;
-            case "../assets/img/choclo.avif":
+            case "/src/assets/img/choclo.avif":
                 return Choclo;
-            case "../assets/img/hamburg.avif":
+            case "/src/assets/img/hamburg.avif":
                 return Hamburg;
-            case "../assets/img/taco1.avif":
+            case "/src/assets/img/taco1.avif":
                 return Taco1;
-            case "../assets/img/taco2.avif":
+            case "/src/assets/img/taco2.avif":
                 return Taco2;
-            case "../assets/img/taco3.avif":
+            case "/src/assets/img/taco3.avif":
                 return Taco3;
-            case "../assets/img/pica.avif":
+            case "/src/assets/img/pica.avif":
                 return Pica;
-            case "../assets/img/tosta.avif":
+            case "/src/assets/img/tosta.avif":
                 return Tosta;
-            case "../assets/img/choclo.avif":
+            case "/src/assets/img/choclo.avif":
                 return Choclo;
-            case "../assets/img/hamburg.avif":
+            case "/src/assets/img/hamburg.avif":
                 return Hamburg;
 
             default:
@@ -41,15 +47,18 @@ function Orders(){
         <>
         <Menu/>
         <div className="carta">
-                {orders[0].map((item, index) => (
-                    <OrderItem 
-                        key={index}
-                        foodName={item.foodName}
-                        foodDescription={item.foodDescription}
-                        foodPrice={item.foodPrice}
-                        foodImg={importarImagen(item.foodImg)}
-                    />
-                ))}
+                {orders[0].map((item, index) =>{
+                    console.log(item);
+                    return (
+                        <OrderItem 
+                            key={index}
+                            foodName={item.foodName}
+                            foodDescription={item.foodDescription}
+                            foodPrice={item.foodPrice}
+                            foodImg={importarImagen(item.foodImg)}
+                        />
+                    )
+                })}
         </div>  
         
         </>
