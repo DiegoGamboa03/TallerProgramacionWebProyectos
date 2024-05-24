@@ -9,7 +9,7 @@ function FoodItem({foodName = "", foodImg = "", foodDescription = "", foodPrice 
     const handleOnClick = () =>{
         addOrder(foodItem);
         alert(`Se ha añadido ${foodName} a tus pedidos`);
-        console.log(orders)
+        console.log(orders[0])
     }
     
     return (

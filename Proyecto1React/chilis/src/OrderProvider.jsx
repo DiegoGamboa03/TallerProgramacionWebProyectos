@@ -15,7 +15,7 @@ export function OrderProvider({ children }) { // Agregar children como parámetr
     const [order, setOrder] = useState([]);
     
     const addOrder = (foodItem) => {
-        setOrder(order.push(foodItem));
+        setOrder([...order, foodItem]);
     }
 
     return (
