@@ -47,6 +47,7 @@ function Orders(){
         <>
         <Menu/>
         <div className="carta">
+                <h2>Tus pedidos</h2>
                 {orders[0].map((item, index) =>{
                     console.log(item);
                     return (

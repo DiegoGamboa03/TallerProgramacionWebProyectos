@@ -208,3 +208,7 @@ button:hover {
   border-radius: 8px 8px 0 0; /* Redondear solo la esquina superior de la imagen */
   margin-bottom: 15px; /* Margen inferior para separar las imágenes */
 }
+
+h2{
+  text-align: center;
+}
