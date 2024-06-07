@@ -7,7 +7,7 @@ import Hamburg from "../../assets/img/hamburg.avif"
 import Taco1 from "../../assets/img/taco1.avif"
 import Taco2 from "../../assets/img/taco2.avif"
 import Taco3 from "../../assets/img/taco4.avif"
-import menuData from "../../pages/data/productos.json"
+import { useApiContext } from "../../ApiContext";
 
 const importarImagen = (ruta) => {
         switch (ruta) {
@@ -32,13 +32,19 @@ const importarImagen = (ruta) => {
       };
 
 function FoodMenu(){
+
+  const { favoritos, tacosFajitas ,loading, error } = useApiContext();
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
     return(
         <>
         <Menu/>
         <div className="carta">
             <h1><i className='bx bx-happy-beaming'></i> FAVORITOS </h1>
             <div className="favorito">
-                {menuData.favoritos.map((item, index) => (
+                {favoritos.map((item, index) => (
                     <FoodItem 
                         key={index}
                         foodName={item.foodName}
@@ -50,7 +56,7 @@ function FoodMenu(){
             </div>
             <h1><i className='bx bxs-wink-smile'></i> TACOS & FAJITAS </h1>
             <div className="taco">
-                {menuData.tacosFajitas.map((item, index) => (
+                {tacosFajitas.map((item, index) => (
                     <FoodItem 
                         key={index}
                         foodName={item.foodName}
