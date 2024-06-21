@@ -244,11 +244,11 @@ h2{
 }
 
 .resumenVenta {
-  margin-top: 3%;
+  margin-top: 22%;
   width: 15%;
   margin-bottom: 22%;
   position: absolute;
-  left: 58%; /* Ajusta este valor según sea necesario */
+  left: 42%; /* Ajusta este valor según sea necesario */
 }
 .contenidoResumen{
   margin-left: 25%;
@@ -285,5 +285,6 @@ h2{
 }
 
 .empty-cart{
- 
+margin-top: 10%;
+ margin-left: 35%;
 }

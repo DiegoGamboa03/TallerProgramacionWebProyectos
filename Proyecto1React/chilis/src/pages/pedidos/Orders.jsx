@@ -113,14 +113,12 @@ function Orders() {
               </div>
             </>
           ) : (
-            <div className="menuchilis">
-              <div className="empty-cart">
-                <div>
-                  <h2>
-                    ¡Tu carrito está vacío! <br /> Ingresa a nuestra carta y
-                    agrega productos a tu pedido.
-                  </h2>
-                </div>
+            <div className="empty-cart">
+              <div>
+                <h2>
+                  ¡Tu carrito está vacío! <br /> Ingresa a nuestra carta y
+                  agrega productos a tu pedido.
+                </h2>
               </div>
             </div>
           )}
