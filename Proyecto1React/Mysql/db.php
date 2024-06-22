@@ -1,14 +1,14 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "chilis";
+$username = "root";  
+$password = "";      
+$dbname = "chilis_BD_G5";  
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$conexion = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conexion->connect_error) {
+    die("Conexión fallida: " . $conexion->connect_error);
 }
 ?>
