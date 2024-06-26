@@ -3,7 +3,8 @@ import React, { useState, useContext } from "react";
 const orderContext = React.createContext();
 const addOrderContext = React.createContext();
 const removeOrderContext = React.createContext();
-const updateOrderContext = React.createContext(); // Nuevo contexto para actualizar
+const updateOrderContext = React.createContext(); // Contexto para actualizar
+const clearOrderContext = React.createContext(); // Contexto para limpiar el carrito
 
 export function useOrderContext() {
   return useContext(orderContext);
@@ -18,7 +19,11 @@ export function useRemoveOrderContext() {
 }
 
 export function useUpdateOrderContext() {
-  return useContext(updateOrderContext); // Hook para actualizar pedido
+  return useContext(updateOrderContext);
+}
+
+export function useClearOrderContext() {
+  return useContext(clearOrderContext); // Hook para limpiar el carrito
 }
 
 export function OrderProvider({ children }) {
@@ -38,12 +43,18 @@ export function OrderProvider({ children }) {
     setOrder(updatedOrder);
   };
 
+  const clearOrder = () => {
+    setOrder([]);
+  };
+
   return (
     <orderContext.Provider value={[order, setOrder]}>
       <addOrderContext.Provider value={addOrder}>
         <removeOrderContext.Provider value={removeItem}>
-          <updateOrderContext.Provider value={updateItem}> {/* Proporciona la función de actualización */}
-            {children}
+          <updateOrderContext.Provider value={updateItem}>
+            <clearOrderContext.Provider value={clearOrder}> {/* Proporciona la función de limpieza */}
+              {children}
+            </clearOrderContext.Provider>
           </updateOrderContext.Provider>
         </removeOrderContext.Provider>
       </addOrderContext.Provider>

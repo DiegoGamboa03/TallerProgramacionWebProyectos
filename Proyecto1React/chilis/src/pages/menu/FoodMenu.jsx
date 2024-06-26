@@ -47,6 +47,7 @@ function FoodMenu(){
                 {favoritos.map((item, index) => (
                     <FoodItem 
                         key={index}
+                        id = {item.id}
                         foodName={item.foodName}
                         foodDescription={item.foodDescription}
                         foodPrice={item.foodPrice}
@@ -59,6 +60,7 @@ function FoodMenu(){
                 {tacosFajitas.map((item, index) => (
                     <FoodItem 
                         key={index}
+                        id = {item.id}
                         foodName={item.foodName}
                         foodDescription={item.foodDescription}
                         foodPrice={item.foodPrice}

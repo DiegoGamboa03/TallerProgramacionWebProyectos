@@ -1,5 +1,10 @@
+import React from "react";
 import Menu from "../../components/Menu";
-import { useOrderContext, useRemoveOrderContext } from "../../OrderProvider";
+import {
+  useOrderContext,
+  useRemoveOrderContext,
+  useClearOrderContext,
+} from "../../OrderProvider";
 import Pica from "../../assets/img/pica.avif";
 import Tosta from "../../assets/img/tosta.avif";
 import Choclo from "../../assets/img/choclo.avif";
@@ -7,10 +12,12 @@ import Hamburg from "../../assets/img/hamburg.avif";
 import Taco1 from "../../assets/img/taco1.avif";
 import Taco2 from "../../assets/img/taco2.avif";
 import Taco3 from "../../assets/img/taco4.avif";
+import Swal from "sweetalert2";
 
 function Orders() {
   const orders = useOrderContext();
   const removeItem = useRemoveOrderContext();
+  const clearOrders = useClearOrderContext();
 
   const importarImagen = (ruta) => {
     switch (ruta) {
@@ -52,6 +59,53 @@ function Orders() {
     removeItem(index); // Llama a la función para eliminar el producto del contexto
   };
 
+  const registrarVenta = async () => {
+    const ventaData = {
+      subtotal: total,
+      igv: igvTotal,
+      total: totalConIgv,
+      detalle: orders[0].map((item) => ({
+        idProducto: item.id, 
+        cantidad: 1, 
+        precioUnitario: item.foodPrice,
+      })),
+    };
+
+    try {
+      const response = await fetch(
+        "http://localhost:8022/registrarVentaDetalle",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(ventaData),
+        }
+      );
+
+      if (!response.ok) {
+        const errorResult = await response.json();
+        throw new Error(errorResult.error || "Error al registrar la venta");
+      }
+
+      const result = await response.json();
+      console.log("Venta registrada con éxito:", result);
+
+      // Mostrar alerta de éxito usando SweetAlert
+      Swal.fire({
+        title: "¡Venta registrada!",
+        text: "La venta ha sido registrada exitosamente.",
+        icon: "success",
+        confirmButtonText: "OK",
+      }).then(() => {
+        // Limpiar el carrito
+        clearOrders();
+      });
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
+  };
+
   return (
     <>
       <Menu />
@@ -73,23 +127,22 @@ function Orders() {
                       </tr>
                     </thead>
                     <tbody>
-                      {orders[0].map((item, index) => (
+                      {orders[0].map((order, index) => (
                         <tr key={index}>
                           <td>
                             <img
-                              id="imagenProducto"
-                              src={importarImagen(item.foodImg)}
-                              alt={item.foodName}
-                              width="50%"
+                              className="card-img-top"
+                              src={importarImagen(order.foodImg)}
+                              alt={order.foodName}
                             />
                           </td>
-                          <td>{item.foodName}</td>
-                          <td>{item.foodDescription}</td>
-                          <td>{item.foodPrice}</td>
+                          <td>{order.foodName}</td>
+                          <td>{order.foodDescription}</td>
+                          <td>S/. {order.foodPrice}</td>
                           <td>
                             <button
-                              className="eliminar"
                               onClick={() => handleEliminarProducto(index)}
+                              className="btn eliminar"
                             >
                               Eliminar
                             </button>
@@ -98,16 +151,18 @@ function Orders() {
                       ))}
                     </tbody>
                   </table>
-                </div>
-              </div>
-              <div className="resumenVenta card">
-                <div className="contenidoResumen">
-                  <h3>Resumen de la venta</h3>
-                  <p>Subtotal: S/. {total}</p>
-                  <p>IGV (18%): S/. {igvTotal}</p>
-                  <p>Total: S/. {totalConIgv}</p>
-                  <div className="crearVenta">
-                    <button>Registrar venta</button>
+                  <div className="total-container">
+                    <div className="total">
+                      <h3>Subtotal: S/. {total}</h3>
+                      <h3>IGV (18%): S/. {igvTotal}</h3>
+                      <h3>Total: S/. {totalConIgv}</h3>
+                    </div>
+                    <button
+                      onClick={registrarVenta}
+                      className="btn btn-primary"
+                    >
+                      Registrar Venta
+                    </button>
                   </div>
                 </div>
               </div>

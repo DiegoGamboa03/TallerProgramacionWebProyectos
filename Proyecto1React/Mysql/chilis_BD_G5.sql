@@ -27,6 +27,27 @@ CREATE TABLE locales (
     localUrl VARCHAR(1024) NOT NULL
 );
 
+-- Crear la tabla 'ventas'
+CREATE TABLE ventas (
+    idVenta INT AUTO_INCREMENT PRIMARY KEY,
+    fechaVenta TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    subtotal DECIMAL(10, 2) NOT NULL,
+    igv DECIMAL(10, 2) NOT NULL,
+    total DECIMAL(10, 2) NOT NULL
+);
+
+-- Crear la tabla 'detalle_venta'
+CREATE TABLE detalle_venta (
+    idDetalle INT AUTO_INCREMENT PRIMARY KEY,
+    idVenta INT,
+    idProducto INT,
+    cantidad INT NOT NULL,
+    precioUnitario DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (idVenta) REFERENCES ventas(idVenta),
+    FOREIGN KEY (idProducto) REFERENCES productos(id)
+);
+
+
 -- Insertar datos en la tabla 'locales'
 INSERT INTO locales (localName, localImg, localDescription, localUrl) VALUES
 ('CHILI\'S - BENAVIDES', './assets/img/local1.jpg', 'Cadena apta para familias que ofrece alimentos estadounidenses y tex-mex en un ambiente sureño. Opciones de servicio: Tiene asientos al aire libre, Tiene menú para niños.', 'https://www.google.com/maps/place/Chili%E2%80%99s+Benavides/@-12.1270139,-77.0141709,17z/data=!4m14!1m7!3m6!1s0x9105c801a420fc79:0xed53d9e2a5c6967d!2sChili%E2%80%99s+Benavides!8m2!3d-12.1270139!4d-77.0141709!16s%2Fg%2F1tvr_sqt!3m5!1s0x9105c801a420fc79:0xed53d9e2a5c6967d!8m2!3d-12.1270139!4d-77.0141709!16s%2Fg%2F1tvr_sqt?entry=ttu'),
@@ -68,4 +89,14 @@ INSERT INTO productos (foodName, foodDescription, foodPrice, foodImg, idCategori
 
 
 
-select * from productos
+select * from productos;
+select * from ventas;
+select * from detalle_venta;
+
+
+
+
+
+
+
+

@@ -41,6 +41,7 @@ function Promotions() {
             {chiliar.map((item, index) => (
               <FoodItem
                 key={index}
+                id ={item.id}
                 foodName={item.foodName}
                 foodDescription={item.foodDescription}
                 foodPrice={item.foodPrice}
@@ -55,6 +56,7 @@ function Promotions() {
             {promociones.map((item, index) => (
               <FoodItem
                 key={index}
+                id ={item.id}
                 foodName={item.foodName}
                 foodDescription={item.foodDescription}
                 foodPrice={item.foodPrice}

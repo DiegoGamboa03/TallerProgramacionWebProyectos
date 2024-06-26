@@ -24,7 +24,7 @@ export function ApiProvider({ children }) {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:8000/productos');
+            const response = await fetch('http://localhost:8022/productos');
             if (!response.ok) {
                 throw new Error('Error al obtener los datos');
             }

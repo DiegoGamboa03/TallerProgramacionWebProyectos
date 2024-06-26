@@ -1,10 +1,10 @@
 import { useAddOrderContext, useOrderContext } from "../OrderProvider";
 
-function FoodItem({foodName = "", foodImg = "", foodDescription = "", foodPrice = ""}) {
+function FoodItem({id= "", foodName = "", foodImg = "", foodDescription = "", foodPrice = ""}) {
     
     const addOrder = useAddOrderContext();
     const orders = useOrderContext();
-    const foodItem =  {foodName, foodImg, foodDescription,foodPrice}
+    const foodItem =  {id, foodName, foodImg, foodDescription,foodPrice}
     
     const handleOnClick = () =>{
         addOrder(foodItem);
@@ -15,7 +15,7 @@ function FoodItem({foodName = "", foodImg = "", foodDescription = "", foodPrice 
     return (
         <>
             <div>
-                <img src={foodImg} alt />
+                <img src={foodImg} alt />           
                 <h3>{foodName}</h3>
                 <p>{foodDescription}</p>
                 <p>S/ {foodPrice}</p>

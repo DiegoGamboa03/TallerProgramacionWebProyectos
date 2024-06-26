@@ -216,7 +216,7 @@ h2{
 /*Para  pedidos */
 
 .orders-container {
-  margin-left: 5%;
+  margin-left: 17%;
   display: flex;
   justify-content: space-between;
 }
@@ -265,15 +265,16 @@ h2{
 }
 
 .tablaModel{
-  margin-left: 15%;
-  margin-right: 18%;
+  margin-left: 13%;
+  margin-right: 10%;
 }
 
 
 
-#imagenProducto{
+.card-img-top{
+  margin-left: 35px;
   border-radius: 15%;
-  margin-left: 10%;
+  width:60%;
 }
 
 .crearVenta{
@@ -287,4 +288,9 @@ h2{
 .empty-cart{
 margin-top: 10%;
  margin-left: 35%;
+}
+
+.total-container{
+margin-left: 35px;
+margin-bottom: 30px;
 }
